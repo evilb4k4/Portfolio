@@ -15,35 +15,38 @@
     <div id="wrapper">
       <section id="header">
         <h1>Adan Rabadan's Project Portfolio</h1>
-        <div class="contact">
-          <p>Find Adan Online:</p>
-        <nav id="nav">
-          <div class='icon-menu'></div>
-          <ul>
-            <li><a href="#" class="icon-home"> Home</a></li>
-            <li><a href="#" class="icon-address-book"> About</a></li>
+        <div>
+          <div class='main-nav icon-menu'>
+           <ul>
+            <li class="tab" data-content="project"><a href="#" class="icon-home"> Home</a></li>
+            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
             <li><a href="http://twitter.com/evilb4k4" target="_blank" class="icon-twitter3"> Twitter</a></li>
             <li><a href="https://github.com/evilb4k4" target="_blank" class="icon-github"> GitHub</a></li>
-          </ul>
-        </nav>
+           </ul>
+          </div>
+        </div>
       </section>
       <div>
-        <section id="content">
+        <section id="project" class="tab-content">
         <div id="welcome-message">
           <p>Hi! I'm Adan. I am a current student at Code Fellows in Seattle, Washington. My skills include HTML, CSS, JavaScript, and jQuery.</p>
         </div>
         <section id="projectPlaceholder">
            <article class="template" data-category="cat">
-             <!-- <header> -->
                <h1 class="title">Title of project</h1>
                <div class="templateContent">
                  Published on <date class="deploy">deployDate. Last updated on <date class="updated">lastUpdated. <p class="projectDescription">Description.</p> Check it out <a class="projectLink" href="">here!</a>
                  <img class="screenshot"/>
                </div>
-             <!-- </header> -->
            </article>
          </section>
          </section>
+         <section id="about" class="tab-content">
+          <header>
+            about Adan Rabadan
+          </header>
+          <p>Hi! I am originally from Chicago, Illinos. I join the United State Air Force after high school, I became 2T2X1 Air Transportation specialist. I was lucky enough to get station all around the world to country like Germany, England, South Korea and my last duty station was Lewis-McChord AFB, WA. After my time in the military I went to school to be a CNC Machinist that were I learn to program for CNC machine and 3D design aircraft parts. I like programming so I decided to attend Code Fellows to be a software developer.</p>
+        </section>
       </div>
       <div id="footer">
         <p>&copy Adan Rabadan 2017</p>
@@ -53,7 +56,8 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="projectsContent.js"></script>
-    <script src="app.js"></script>
+    <script src="script/projectsContent.js"></script>
+    <script src="script/projectView.js"></script>
+    <script src="script/app.js"></script>
   </body>
   </html>
