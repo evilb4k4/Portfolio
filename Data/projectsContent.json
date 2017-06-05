@@ -1,6 +1,4 @@
-'use strict';
-
-var projectData = [
+[
   {
     title: 'About Me',
     link: 'https://github.com/evilb4k4/Week-1-d21',
