@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+    <script id="project-template" type="text/x-handlebars-template">
+      <h1>{{title}}</h1>
+      {{{description}}}
+      <p>Depoloyed On: {{deployDate}}</p>
+      <a href="{{link}}">Check it out!</a></br>
+      <img src="{{screenshot}}" />
+    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -56,6 +63,7 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.amd.min.js"></script>
     <script src="script/projectsContent.js"></script>
     <script src="script/projectView.js"></script>
     <script src="script/app.js"></script>
