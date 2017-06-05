@@ -1,0 +1,34 @@
+[
+  {
+    title: 'About Me',
+    link: 'https://github.com/evilb4k4/Week-1-d21',
+    deployDate: '04/03/2017',
+    lastUpdated: '',
+    screenshot: 'add image',
+    description: '<p>This is my first project as a student. It includes a guessing game about me.</p>'
+  },
+  {
+    title: 'Salmon Cookies',
+    link: 'https://github.com/evilb4k4/salmon-cookies',
+    deployDate: '04/10/2017',
+    lastUpdated: '',
+    screenshot: 'add image',
+    description: '<p>This project was created for unique product called Salmon Cookies. The admin page will allow the user to add a new store and update the information accordingly.</p>'
+  },
+  {
+    title: 'BusMall',
+    link: 'https://github.com/evilb4k4/BusMall',
+    deployDate: '01/20/2017',
+    lastUpdated: '',
+    screenshot: 'add image',
+    description: '<p>This project is used for focus group participants to provide feedback about the products they are most likely to purchase from a bus version of the popular SkyMall catalog found in the seat backs on airplanes.</p>'
+  },
+  {
+    title: 'Stockers',
+    link: 'https://github.com/evilb4k4/stockers',
+    deployDate: '01/27/2017',
+    lastUpdated: '',
+    screenshot: 'add image',
+    description: '<p>This was completed during project week with three other classmates. It an app that help find news and stock prices when do trading.</p>'
+  },
+];
