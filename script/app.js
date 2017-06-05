@@ -23,14 +23,35 @@ Project.prototype.toHtml = function() {
   return $newProject;
 };
 
-projectData.sort(function(a,b) {
+Project.sort(function(a,b) {
   return (new Date(b.deployDate)) - (new Date(a.deployDate));
 });
 
-projectData.forEach(function(projectObject) {
+Project.forEach(function(projectObject) {
   projects.push(new Project(projectObject));
   console.log(projects);
 });
+
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    console.log('Loading from local Storage');
+    console.log('JSON.parse', JSON.parse(localStorage.rawData));
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    console.log('Project.all', Project.all);
+    Project.initialize();
+  } else {
+    console.log('Setting data into local storage');
+    $.getJSON('Data/projectsContent.json')
+    .then(function(data){
+      console.log('data:', data);
+      Project.loadAll(data);
+      localStorage.rawData = JSON.stringify(data);
+      Project.initialize();
+    }, function(err) {
+      console.log('Error!');
+    })
+  }
+}
 
 projects.forEach(function(a) {
   console.log(a);
