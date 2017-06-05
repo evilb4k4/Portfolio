@@ -10,27 +10,23 @@ function Project (items) {
   this.screenshot = items.screenshot;
   this.description = items.description;
 }
+Project.all = [];
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-
-  $newProject.find('.title').html(this.title);
-  $newProject.find('.projectLink').html(this.link);
-  $newProject.find('.deploy').html(this.deployDate);
-  $newProject.find('.updated').html(this.lastUpdated);
-  $newProject.find('.projectDescription').html(this.description);
-  return $newProject;
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
-Project.sort(function(a,b) {
-  return (new Date(b.deployDate)) - (new Date(a.deployDate));
-});
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.deployDate)) - (new Date(a.deployDate));
+  });
 
-Project.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-  console.log(projects);
-});
+  rawData.forEach(function(projectObject) {
+    Project.all.push(new Project(projectObject));
+  });
+}
 
 Project.fetchAll = function() {
   if (localStorage.rawData) {
@@ -53,7 +49,8 @@ Project.fetchAll = function() {
   }
 }
 
-projects.forEach(function(a) {
-  console.log(a);
-  $('#projectPlaceholder').append(a.toHtml());
-});
+Project.initialize = function() {
+  Project.all.forEach(function(a) {
+    $('#projectPlaceholder').append(a.toHtml());
+  });
+}
