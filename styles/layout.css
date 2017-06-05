@@ -2,14 +2,6 @@
   text-align: center;
   margin: 0px auto;
 }
-
-#nav {
-  float: left;
-  font-size: 25px;
-  width: 20%;
-  display: inline-block;
-}
-
 #footer {
   position: absolute;
   bottom: 20px;
