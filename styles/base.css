@@ -1,41 +1,37 @@
-
-img{
-  max-width: 100%;
-  height: auto;
+* {
+  font-family: 'Impact', sans-serif;
 }
 
-body {
-  line-height: 1.5;
-  font-size: 100%;
-  color: #313131;
+h1 {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 50px;
 }
 
-hr {
-  margin: 1em;
-  width: 80%;
+.contact {
+  font-size: 25px;
 }
 
-/*TEXT STYLES
-=======================================*/
-p {
-  font-size: 1em;
+
+.contact ul {
+  display: inline-flex;
+  content: center;
 }
 
-address {
+.contact li {
   display: inline-block;
+  margin-left: 10%;
 }
 
-/*LINK STYLES
-=======================================*/
-
-a, a:link, a:active {
-  text-decoration: none;
-  color: #777;
+#welcome-message, #projectPlaceholder{
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  float: right;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 25px;
 }
 
-a:hover, a:focus {
-  color: #29506D;
-}
-
-a:visited {
+.template {
+  display: none;
 }
