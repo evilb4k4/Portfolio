@@ -1,6 +1,6 @@
 'use strict';
 
-var projectView = {};
+const projectView = {};
 
 projectView.mainNav = function() {
   $('.main-nav').on('click', '.tab', function() {

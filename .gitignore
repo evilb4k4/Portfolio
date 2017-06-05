@@ -1,4 +1,7 @@
 # Created by https://www.gitignore.io/api/osx,linux,windows
+# Dependency directories
+node_modules
+jspm_packages
 
 ### Linux ###
 *~

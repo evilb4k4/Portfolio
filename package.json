@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio packed.json file",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilb4k4/Portfolio.git"
+  },
+  "author": "Adan Rabadan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evilb4k4/Portfolio/issues"
+  },
+  "homepage": "https://github.com/evilb4k4/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
