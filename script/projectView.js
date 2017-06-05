@@ -7,7 +7,7 @@ projectView.mainNav = function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).show();
   });
-  $('.main-navigation .tab:first').click();
+  $('.main-nav .tab:first').click();
 };
 
 projectView.mainNav();
