@@ -1,39 +1,47 @@
+@media only screen and (min-width: 700px) {
+  h1 {
+    clear: both;
+  }
 
- .icon-menu{
-   width: 100%;
-   font-size: 1em;
-   float: right;
- }
- .main-nav ul {
-   display: none;
-   padding: 0;
-   list-style: none;
-   clear: both;
- }
-
- .main-nav:hover ul {
-   display: block;
- }
-
- .main-nav li {
-   margin-right: .4em;
-   font-size: 1.5em;
-   border-bottom: 1px solid #ccc;
- }
- .template {
-   display: none;
- }
-
-@media only screen and (min-width: 640px) {
+  .icon-menu {
+    visibility: hidden;
+  }
 
   .main-nav {
-   padding: .2em .2em .2em .2em;
+    visibility: visible;
   }
-  .main-nav ul{
-  display: block;
+}
+
+@media only screen and (max-width: 699px) {
+  /*#nav {
+    visibility: hidden;
+  }*/
+
+  #welcome-message {
+    width: 90%;
   }
-  .main-nav ul li{
-  display: inline;
-  border-bottom:none;
+
+  .main-nav ul, .main-nav p {
+    visibility: hidden;
   }
- }
+
+  .main-nav:hover ul, .main-nav p {
+    display: inline-block;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .icon-menu {
+    visibility: visible;
+  }
+
+
+  .filters li {
+    display: block;
+  }
+
+  .filters select {
+    display: inline;
+    width: 75%;
+  }
+}

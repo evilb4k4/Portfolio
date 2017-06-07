@@ -21,23 +21,19 @@
       return (new Date(b.deployDate)) - (new Date(a.deployDate));
     });
 
-    rawData.forEach(function(projectObject) {
-      Project.all.push(new Project(projectObject));
+    rawData.forEach(function(app) {
+      Project.all.push(new Project(app));
     });
+    console.log('Project.all length', Project.all.length);
   }
 
   Project.fetchAll = function() {
     if (localStorage.rawData) {
-      console.log('Loading from local Storage');
-      console.log('JSON.parse', JSON.parse(localStorage.rawData));
       Project.loadAll(JSON.parse(localStorage.rawData));
-      console.log('Project.all', Project.all);
       Project.initialize();
     } else {
-      console.log('Setting data into local storage');
       $.getJSON('Data/projectsContent.json')
       .then(function(data){
-        console.log('data:', data);
         Project.loadAll(data);
         localStorage.rawData = JSON.stringify(data);
         Project.initialize();
@@ -60,6 +56,8 @@
       return acc + val;
     }, 0)
   };
+
+  Project.fetchAll(Project.initialize);
 
   module.Project = Project;
 

@@ -4,8 +4,8 @@
   const homeController = {};
 
   homeController.init = function() {
-    $('#about-page').hide();
-    $('#projectContentPlaceholder').show();
+    $('#about').hide();
+    $('#projectPlaceholder').show();
   }
 
   module.homeController = homeController;

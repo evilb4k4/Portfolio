@@ -2,7 +2,7 @@
 
 const projectView = {};
 
-projectView.mainNav = function() {
+projectView.mainNavigation = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).show();
@@ -10,4 +10,9 @@ projectView.mainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-projectView.mainNav();
+projectView.getWordCount = function() {
+  $('#word-count').text(Project.wordCount());
+}
+
+projectView.mainNavigation();
+projectView.getWordCount();

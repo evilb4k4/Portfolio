@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/layout.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/module.css" />
+    <title>Adan's Portfolio</title>
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <h1>{{title}}</h1>
+      {{{description}}}
+      <p>Depoloyed On: {{deployDate}}</p>
+      <a href="{{link}}">Check it out here!</a></br>
+      <img src="{{screenshot}}" />
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <section id="header">
+        <h1>Adan Rabadan's Project Portfolio</h1>
+        <div class="main-nav icon-menu">
+          <ul>
+            <li class="tab"  data-content="project">Home</li>
+            <li class="tab" data-content="about">About</li>
+            <!-- <li class="tab online" data-content="find-online">Online</li> -->
+            <ul class="icons">
+              <li><a class="icon-mail" href="mailto:evilb4k4@gmail.com" target="_blank"></a></li>
+              <li><a class="icon-github" href="https://github.com/evilb4k4" target="_blank"></a></li>
+              <li><a class="icon-twitter3" href="http://twitter.com/evilb4k4" target="_blank"></a></li>
+            </ul>
+          </ul>
+        </div>
+      </section>
+      <main>
+        <section id="entry-fields">
+          <h2 class="new-h2">Add A New Project</h2>
+          <form id="new-project-form">
+            <label>
+              <input for="new-project-title" type="text" id="new-project-title" placeholder="Title of New Project" required>
+            </label>
+            <label>
+              <input for="new-project-link" type="text" id="new-project-link" placeholder="Link To New Project" required>
+            </label>
+            <label>
+              <input for="new-project-date" type="text" id="new-project-date" placeholder="Deploy Date in MM/DD/YYYY Format" required>
+            </label>
+            <label>
+              <input for="new-project-keyword" type="text" id="new-project-keyword" placeholder="Keyword" required>
+            </label>
+            <label>
+              <input for="new-project-screenshot" type="text" id="new-project-screenshot" placeholder="File Path of Screenshot" required>
+            </label>
+            <label>
+              <textarea id="new-project-description" rows="4" cols="30"placeholder="Brief Description" required></textarea>
+            </label></br>
+            <label>
+              <input type="checkbox" id="new-project-checkbox">Post New Project
+            </label>
+          </form>
+        </section>
+        <section id="project-preview" class="tab-content">
+
+        </section>
+        <section id="project-export">
+          <label id="export-field" for="project-json" class="pull-right">
+            <input type="text" readonly id="project-json">
+            When finalized, copy the above JSON, and paste into projectObject.js
+          </label>
+        </section>
+      <div id="footer">
+        <p>&copy Adan Rabadan 2017</p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="Data/projectsContent.json"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/projectView.js"></script>
+  </body>
+</html>

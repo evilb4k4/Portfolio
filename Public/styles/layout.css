@@ -2,6 +2,96 @@
   text-align: center;
   margin: 0px auto;
 }
+
+.main-nav a {
+  display: inline-block;
+  margin-left: 6%;
+  font-size: 2em;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 6%;
+}
+
+#welcome-message, #projectPlaceholder {
+  display: inline-block;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.template-section {
+  border: 1px solid #BFD4DB;
+  margin: 10px;
+}
+
+.template-section h1 {
+  font-size: 35px;
+}
+
+#about-page {
+  line-height: 2.5;
+  display: inline-block;
+  text-indent: 50px;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 25px;
+}
+
+#about-page header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.template {
+  display: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+.filters li {
+  display: inline;
+}
+
+.filters select {
+  font-size: 20px;
+  display: inline;
+  width: 25%;
+}
+
+.new-h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#new-project-checkbox {
+  width: 5%;
+}
+
+.tab:hover {
+  color: darkblue;
+  cursor: pointer;
+}
+
+.add {
+  color: darkblue;
+}
+
+#export-field label {
+  font-size: 15px;
+}
+
 #footer {
   position: absolute;
   bottom: 20px;
