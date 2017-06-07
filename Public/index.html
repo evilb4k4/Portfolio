@@ -2,75 +2,81 @@
   <html>
   <head>
     <meta charset="utf-8">
-    <title>Adan's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
+    <title>Adan's Portfolio</title>
+
     <script id="project-template" type="text/x-handlebars-template">
-      <h1>{{title}}</h1>
-      {{{description}}}
-      <p>Depoloyed On: {{deployDate}}</p>
-      <a href="{{link}}">Check it out!</a></br>
-      <img src="{{screenshot}}" />
+      <section class="template-section" data-title="{{title}}" data-keyword="{{keyword}}">
+        <h2>{{title}}</h2>
+        {{{description}}}
+        <p>Deployed On: {{deployDate}}</p>
+        <a href="{{link}}" target="_blank">Check it out here!</a><br />
+        <a href="{{link}}" target="_blank"><img src="{{screenshot}}" /></a>
+    </script>
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      <a href="{{html_url}}" target="_blank">{{html_url}}</a>
     </script>
   </head>
   <body>
     <div id="wrapper">
-      <section id="header">
+      <header id="header">
         <h1>Adan Rabadan's Project Portfolio</h1>
-        <div>
-          <div class='main-nav icon-menu'>
-           <ul>
-            <li class="tab" data-content="project"><a href="#" class="icon-home"> Home</a></li>
-            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-            <li><a href="http://twitter.com/evilb4k4" target="_blank" class="icon-twitter3"> Twitter</a></li>
-            <li><a href="https://github.com/evilb4k4" target="_blank" class="icon-github"> GitHub</a></li>
-           </ul>
-          </div>
+        <nav class="main-nav">
+          <h3 class="icon-menu"></h3>
+            <a href="/" class="tab" data-content="project">Home</a>
+            <a href="/about" class="tab" data-content="about">About</a>
+              <ul class="icons">
+                <li><a class="icon-mail" href="mailto:evilb4k4@gmail.com" target="_blank"></a></li>
+                <li><a class="icon-github" href="https://github.com/evilb4k4" target="_blank"></a></li>
+                <li><a class="icon-twitter3" href="http://twitter.com/evilb4k4" target="_blank"></a></li>
+              </ul>
         </div>
-      </section>
-      <div>
-        <section id="project" class="tab-content">
+      </header>
+      <section id="project" class="tab-content">
         <div id="welcome-message">
           <p>Hi! I'm Adan. I am a current student at Code Fellows in Seattle, Washington. My skills include HTML, CSS, JavaScript, and jQuery.</p>
         </div>
-        <section id="projectPlaceholder">
-           <article class="template" data-category="cat">
-               <h1 class="title">Title of project</h1>
-               <div class="templateContent">
-                 Published on <date class="deploy">deployDate. Last updated on <date class="updated">lastUpdated. <p class="projectDescription">Description.</p> Check it out <a class="projectLink" href="">here!</a>
-                 <img class="screenshot"/>
-               </div>
-           </article>
-         </section>
-         </section>
-         <section id="about" class="tab-content">
+        <section id="projectPlaceholder" class="word-count-placeholder">
+          <article class="template">
+          </article>
+        </section>
+      </section>
+      <section id="about" class="tab-content">
+        <section id="projectPlaceholder" data-content="cat">
           <header>
-            about Adan Rabadan
+            About Adan Rabadan
           </header>
           <p>Hi! I am originally from Chicago, Illinos. I join the United State Air Force after high school, I became 2T2X1 Air Transportation specialist. I was lucky enough to get station all around the world to country like Germany, England, South Korea and my last duty station was Lewis-McChord AFB, WA. After my time in the military I went to school to be a CNC Machinist that were I learn to program for CNC machine and 3D design aircraft parts. I like programming so I decided to attend Code Fellows to be a software developer.</p>
+          <p id="repos"></p>
         </section>
-      </div>
-      <div id="footer">
+      </section>
+      <footer id="footer">
+        <a class="add" href="addNewProject.html">Add New Project</a>
         <p>&copy Adan Rabadan 2017</p>
-      </div>
-    </div>
+      </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <script src="Data/projectsContent.json"></script>
     <script src="Scripts/Model/app.js"></script>
+    <script src="Scripts/Model/repo.js"></script>
 
     <script src="Scripts/Controller/aboutController.js"></script>
     <script src="Scripts/Controller/homeController.js"></script>
     <script src='Scripts/Controller/routes.js'></script>
 
     <script src="Scripts/View/projectView.js"></script>
+    <script src="Scripts/View/repoView.js"></script>
+
   </body>
   </html>
